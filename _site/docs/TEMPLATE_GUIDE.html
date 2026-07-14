@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Template customization guide | Your Name</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Template customization guide" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software Engineer and Researcher" />
+<meta property="og:description" content="Software Engineer and Researcher" />
+<link rel="canonical" href="https://yourname.github.io/docs/TEMPLATE_GUIDE.html" />
+<meta property="og:url" content="https://yourname.github.io/docs/TEMPLATE_GUIDE.html" />
+<meta property="og:site_name" content="Your Name" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Template customization guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Your Name"},"description":"Software Engineer and Researcher","headline":"Template customization guide","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://yourname.github.io/images/profile.svg"},"name":"Your Name"},"url":"https://yourname.github.io/docs/TEMPLATE_GUIDE.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://yourname.github.io/">Your Name</a></h1>
+      
+
+      <h1 id="template-customization-guide">Template customization guide</h1>
+
+<p>This repository can be reused as a personal portfolio without changing the layouts or application code.</p>
+
+<h2 id="1-identity-and-deployment">1. Identity and deployment</h2>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">_config.yml</code> first:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">url</code>, <code class="language-plaintext highlighter-rouge">baseurl</code>, and <code class="language-plaintext highlighter-rouge">repository</code>;</li>
+  <li>the fields under <code class="language-plaintext highlighter-rouge">author</code>;</li>
+  <li>the available languages;</li>
+  <li>appearance and optional integrations.</li>
+</ul>
+
+<p>For a user site such as <code class="language-plaintext highlighter-rouge">username.github.io</code>, keep <code class="language-plaintext highlighter-rouge">baseurl</code> empty. For a project site such as <code class="language-plaintext highlighter-rouge">username.github.io/portfolio</code>, set <code class="language-plaintext highlighter-rouge">baseurl: "/portfolio"</code>.</p>
+
+<h2 id="2-visible-text">2. Visible text</h2>
+
+<p>All interface labels and biography copy live in:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_data/locales/en.yml
+_data/locales/it.yml
+</code></pre></div></div>
+
+<p>Add another locale file when introducing a language, then register it under <code class="language-plaintext highlighter-rouge">languages.available</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<h2 id="3-content">3. Content</h2>
+
+<p>Projects and articles are kept separate from presentation code:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entries/projects/&lt;slug&gt;/&lt;language&gt;.md
+entries/articles/&lt;slug&gt;/&lt;language&gt;.md
+</code></pre></div></div>
+
+<p>Translations must share the same <code class="language-plaintext highlighter-rouge">slug</code>. Use the files in <code class="language-plaintext highlighter-rouge">content-templates/</code> as a starting point.</p>
+
+<h2 id="4-images">4. Images</h2>
+
+<p>Keep content assets grouped by slug:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>images/projects/&lt;slug&gt;/
+images/articles/&lt;slug&gt;/
+</code></pre></div></div>
+
+<p>Use root-relative paths in front matter. Liquid templates apply <code class="language-plaintext highlighter-rouge">relative_url</code>, so the same content works for user and project sites.</p>
+
+<h2 id="5-validation">5. Validation</h2>
+
+<p>Run these commands before publishing:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby scripts/validate_site.rb
+bundle <span class="nb">exec </span>jekyll build
+</code></pre></div></div>
+
+<p>The validator checks required configuration, front matter, supported languages, duplicate entries, permalinks, and referenced local images.</p>
+
+<h2 id="6-shared-modules">6. Shared modules</h2>
+
+<p>The main layout is intentionally small. Shared responsibilities live in dedicated includes:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_includes/head-preferences.html
+_includes/head-alternates.html
+_includes/site-assets.html
+_includes/site-header.html
+_includes/site-footer.html
+_includes/site-scripts.html
+</code></pre></div></div>
+
+<p>Content cards and archive rendering are also reusable includes. Prefer extending an existing include instead of duplicating markup in language-specific pages.</p>
+
+<h2 id="7-safe-update-workflow">7. Safe update workflow</h2>
+
+<p>For substantial template changes:</p>
+
+<ol>
+  <li>create a branch;</li>
+  <li>run validation and the Jekyll build;</li>
+  <li>open a pull request;</li>
+  <li>check the rendered site on desktop and mobile;</li>
+  <li>merge only after the Pages workflow passes.</li>
+</ol>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

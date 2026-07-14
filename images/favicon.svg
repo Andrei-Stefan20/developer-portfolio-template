@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #fdfdfd; }
+    .fg { fill: #111111; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #15171a; }
+      .fg { fill: #e8e8e8; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <circle class="fg" cx="22" cy="22" r="5"/>
+  <circle class="fg" cx="42" cy="22" r="5"/>
+  <circle class="fg" cx="22" cy="42" r="5"/>
+  <circle class="fg" cx="42" cy="42" r="5"/>
+</svg>

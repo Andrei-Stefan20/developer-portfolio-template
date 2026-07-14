@@ -1,0 +1,112 @@
+navigation:
+  main:
+    - title: "Home"
+      url: "/"
+    - title: "About"
+      url: "/about/"
+    - title: "Projects"
+      url: "/work/"
+    - title: "Writing"
+      url: "/writing/"
+    - title: "Archive"
+      url: "/archive/"
+  contact: "Contact"
+  cv: "CV"
+
+about:
+  - "I'm a [your role], focused on [your main area of expertise]."
+  - "My work spans [field one], [field two], and [field three]. I'm particularly interested in [the topics you care about]."
+  - "Here you'll find a selection of the projects and articles I've worked on."
+
+about_page:
+  title: "About me"
+  intro: "A short summary of what you do and what you care about. This appears right under your name on the About page."
+  sections:
+    - title: "Background"
+      paragraphs:
+        - "Replace this with a paragraph about your education, career path, or how you got started. Keep it to two or three sentences."
+        - "This second paragraph can add more detail: what you studied, where you've worked, or what shaped how you approach your field."
+    - title: "What I work on"
+      paragraphs:
+        - "Describe the areas you focus on day to day: the kind of problems, technologies, or research questions you spend most of your time on."
+        - "Add a second paragraph if you want to go into more depth about a specific interest or specialization."
+    - title: "How I approach projects"
+      paragraphs:
+        - "Describe your working style or values: what you optimize for, how you make decisions, or what a collaborator should expect from you."
+
+home:
+  about_title: "About"
+  recent_title: "Latest work and writings"
+  recent_intro: "The most recent projects and articles."
+  archive_link: "View the archive →"
+  archive_url: "/archive/"
+
+work:
+  title: "Projects"
+  intro: "Selected academic and professional work."
+  count_label: "PROJECTS"
+  default_role_label: "ROLE"
+  code_label: "Code ↗"
+  demo_label: "Live demo ↗"
+  paper_label: "Paper ↗"
+  project_label: "Project"
+  empty: "No projects published yet."
+
+writing:
+  title: "Writing"
+  intro: "Notes on artificial intelligence and software engineering."
+  count_label: "ARTICLES"
+  default_category: "Notes"
+  read_suffix: "min"
+
+archive:
+  title: "Article archive"
+  intro: "All published content, organized in one place you can browse."
+  empty: "No articles published yet."
+  article_label: "Article"
+  entries_label: "ENTRIES"
+  search_label: "Search"
+  search_placeholder: "Search by title, type, topic or technology…"
+  type_label: "Content type"
+  tag_label: "Tags"
+  all_label: "All"
+  all_tags_label: "All tags"
+  clear_label: "Clear filters"
+  no_match: "No content matches the selected filters."
+  open_label: "Open"
+  active_prefix: "Active:"
+  active_all: "all content"
+
+search:
+  title: "Search"
+  intro: "Search projects and articles."
+  topics_title: "Browse by topic"
+
+content:
+  case_study_label: "CASE STUDY"
+  writing_label: "Writing"
+  read_aria_prefix: "Read"
+
+accessibility:
+  profile_photo_suffix: "profile photo"
+  project_preview_suffix: "preview"
+  menu_open: "Open menu"
+  menu_close: "Close menu"
+  main_navigation: "Main navigation"
+  theme_toggle: "Switch between light and dark theme"
+  background_toggle: "Change background pattern"
+  font_toggle: "Toggle handwritten font"
+  language_switch_prefix: "View in"
+
+footer:
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  scholar: "Google Scholar"
+  orcid: "ORCID"
+  copyright_symbol: "©"
+
+errors:
+  not_found_code: "ERROR 404"
+  not_found_title: "Page not found."
+  not_found_text: "The content may have been moved or removed."
+  home_link: "← Back to home"

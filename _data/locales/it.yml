@@ -1,0 +1,112 @@
+navigation:
+  main:
+    - title: "Home"
+      url: "/it/"
+    - title: "Chi sono"
+      url: "/it/about/"
+    - title: "Progetti"
+      url: "/it/work/"
+    - title: "Articoli"
+      url: "/it/writing/"
+    - title: "Archivio"
+      url: "/it/archive/"
+  contact: "Contatti"
+  cv: "CV"
+
+about:
+  - "Sono un/una [il tuo ruolo], concentrato/a su [la tua area di competenza principale]."
+  - "Il mio lavoro spazia tra [ambito uno], [ambito due] e [ambito tre]. Mi interessano in particolare [gli argomenti che ti stanno a cuore]."
+  - "Qui trovi una selezione dei progetti e degli articoli su cui ho lavorato."
+
+about_page:
+  title: "Chi sono"
+  intro: "Un breve riassunto di cosa fai e a cosa tieni. Compare subito sotto il tuo nome nella pagina Chi sono."
+  sections:
+    - title: "Percorso"
+      paragraphs:
+        - "Sostituisci con un paragrafo sulla tua formazione, il tuo percorso professionale o come hai iniziato. Due o tre frasi bastano."
+        - "Questo secondo paragrafo può aggiungere dettagli: cosa hai studiato, dove hai lavorato, o cosa ha influenzato il tuo modo di lavorare."
+    - title: "Di cosa mi occupo"
+      paragraphs:
+        - "Descrivi gli ambiti su cui ti concentri di solito: il tipo di problemi, tecnologie o domande di ricerca a cui dedichi più tempo."
+        - "Aggiungi un secondo paragrafo se vuoi approfondire un interesse o una specializzazione specifica."
+    - title: "Come lavoro"
+      paragraphs:
+        - "Descrivi il tuo modo di lavorare o i tuoi valori: cosa ottimizzi, come prendi decisioni, o cosa dovrebbe aspettarsi chi collabora con te."
+
+home:
+  about_title: "Chi sono"
+  recent_title: "Ultimi progetti e articoli"
+  recent_intro: "Una selezione dei contenuti pubblicati più di recente."
+  archive_link: "Vai all'archivio →"
+  archive_url: "/it/archive/"
+
+work:
+  title: "Progetti"
+  intro: "Una selezione di lavori accademici, professionali e personali."
+  count_label: "PROGETTI"
+  default_role_label: "RUOLO"
+  code_label: "Codice ↗"
+  demo_label: "Demo ↗"
+  paper_label: "Paper ↗"
+  project_label: "Progetto"
+  empty: "Non ci sono ancora progetti pubblicati."
+
+writing:
+  title: "Articoli"
+  intro: "Approfondimenti su intelligenza artificiale, ricerca e ingegneria del software."
+  count_label: "ARTICOLI"
+  default_category: "Note"
+  read_suffix: "min"
+
+archive:
+  title: "Archivio"
+  intro: "Tutti i contenuti pubblicati, organizzati in un unico spazio consultabile."
+  empty: "Non ci sono ancora contenuti pubblicati."
+  article_label: "Articolo"
+  entries_label: "CONTENUTI"
+  search_label: "Cerca"
+  search_placeholder: "Cerca per titolo, tipo, argomento o tecnologia…"
+  type_label: "Tipo di contenuto"
+  tag_label: "Tag"
+  all_label: "Tutti"
+  all_tags_label: "Tutti i tag"
+  clear_label: "Azzera filtri"
+  no_match: "Nessun contenuto corrisponde ai filtri selezionati."
+  open_label: "Apri"
+  active_prefix: "Attivo:"
+  active_all: "tutti i contenuti"
+
+search:
+  title: "Cerca"
+  intro: "Cerca tra progetti e articoli."
+  topics_title: "Esplora per argomento"
+
+content:
+  case_study_label: "CASO DI STUDIO"
+  writing_label: "Articoli"
+  read_aria_prefix: "Leggi"
+
+accessibility:
+  profile_photo_suffix: "foto profilo"
+  project_preview_suffix: "anteprima"
+  menu_open: "Apri il menu"
+  menu_close: "Chiudi il menu"
+  main_navigation: "Navigazione principale"
+  theme_toggle: "Cambia tema chiaro o scuro"
+  background_toggle: "Cambia motivo dello sfondo"
+  font_toggle: "Attiva o disattiva il carattere scritto a mano"
+  language_switch_prefix: "Visualizza in"
+
+footer:
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  scholar: "Google Scholar"
+  orcid: "ORCID"
+  copyright_symbol: "©"
+
+errors:
+  not_found_code: "ERRORE 404"
+  not_found_title: "Pagina non trovata"
+  not_found_text: "Il contenuto potrebbe essere stato spostato oppure rimosso."
+  home_link: "← Torna alla home"

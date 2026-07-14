@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b2b2b">
+  <script>
+  (function () {
+    try {
+      var mode = 'auto';
+      var storedTheme = localStorage.getItem('theme');
+      var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var theme = mode === 'auto' ? (storedTheme || systemTheme) : mode;
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme-mode', mode);
+
+      var storedBackground = localStorage.getItem('bg-pattern');
+      var defaultBackground = 'grid';
+      if (storedBackground || defaultBackground !== 'none') {
+        document.documentElement.setAttribute('data-bg', storedBackground || defaultBackground);
+      }
+
+      var storedFont = localStorage.getItem('font-style');
+      var defaultFont = 'default';
+      if ((storedFont || defaultFont) === 'hand') {
+        document.documentElement.setAttribute('data-font', 'hand');
+      }
+    } catch (error) {}
+  })();
+</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap">
+  
+<link rel="stylesheet" href="/css/style.css?v=1784019391">
+<link rel="stylesheet" href="/css/clean-layout.css?v=1784019391">
+<style>:root { --accent-base: #2b2b2b; }</style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Your Name</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software Engineer and Researcher" />
+<meta property="og:description" content="Software Engineer and Researcher" />
+<link rel="canonical" href="https://yourname.github.io/" />
+<meta property="og:url" content="https://yourname.github.io/" />
+<meta property="og:site_name" content="Your Name" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Your Name"},"description":"Software Engineer and Researcher","headline":"Home","name":"Your Name","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://yourname.github.io/images/profile.svg"},"name":"Your Name"},"url":"https://yourname.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="https://yourname.github.io/feed.xml" title="Your Name" />
+  
+  
+  <meta property="og:image" content="https://yourname.github.io/images/profile.svg">
+  <meta name="twitter:image" content="https://yourname.github.io/images/profile.svg">
+  
+  
+
+
+  
+<link rel="alternate" hreflang="en" href="https://yourname.github.io/">
+
+  
+<link rel="alternate" hreflang="it" href="https://yourname.github.io/it/">
+
+
+<link rel="alternate" hreflang="x-default" href="https://yourname.github.io/">
+  
+</head>
+<body>
+  
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Your Name</a>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav" data-open-label="Open menu" data-close-label="Close menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="nav-links">
+        
+        
+        
+        
+          
+          
+          
+          
+          <a class="page-link is-current" href="/">Home</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/about/">About</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/work/">Projects</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/writing/">Writing</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/archive/">Archive</a>
+        
+        
+        
+      </div>
+      <div class="nav-utility">
+        <div class="lang-switch">
+          
+            
+          
+            
+              
+              
+              
+              <a class="page-link lang-link" href="/it/" title="View in IT">IT</a>
+            
+          
+        </div>
+        <button type="button" class="bg-toggle" aria-label="Change background pattern">
+          <svg class="icon-bg-none" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+          <svg class="icon-bg-grid" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+          <svg class="icon-bg-dots" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="8" cy="8" r="1.4"/><circle cx="16" cy="8" r="1.4"/><circle cx="8" cy="16" r="1.4"/><circle cx="16" cy="16" r="1.4"/><circle cx="12" cy="12" r="1.4"/></svg>
+        </button>
+        <button type="button" class="font-toggle" aria-label="Toggle handwritten font">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </button>
+        <button type="button" class="theme-toggle" aria-label="Switch between light and dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l1.41 1.41"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="page-content">
+    <div class="wrapper">
+
+
+
+
+<div class="profile">
+  <img class="profile-photo" src="/images/profile.svg" alt="Your Name profile photo">
+  <div>
+    <h1>Your Name</h1>
+    <p><b>Your Role.</b> <b>Your Second Role or Field of Study.</b> <b>Your City, Country.</b></p>
+    
+  </div>
+</div>
+
+<h2 class="section-title no-rule">About</h2>
+<div class="about-text"><p>I'm a [your role], focused on [your main area of expertise].</p><p>My work spans [field one], [field two], and [field three]. I'm particularly interested in [the topics you care about].</p><p>Here you'll find a selection of the projects and articles I've worked on.</p></div>
+
+
+<h2 class="section-title">Latest work and writings</h2>
+<p class="section-intro">The most recent projects and articles.</p>
+<div class="recent-list">
+  
+  
+
+
+<article class="entry-row entry-project">
+  <div class="entry-side">
+    <time datetime="2026-01-15T00:00:00+01:00">Jan 2026</time>
+    
+      <a class="entry-thumb-link" href="/entries/example-project/">
+        <img class="entry-thumb" src="/images/projects/example-project/cover.svg" alt="Placeholder thumbnail for the example project">
+      </a>
+    
+  </div>
+  <div class="entry-main">
+    <p class="writing-topic">Project Your role on this project</p>
+    <h2><a href="/entries/example-project/">Example Project: Replace This With Your Own</a></h2>
+    <p>A one or two sentence summary of the project, shown wherever it's listed: home, Projects and Archive.</p>
+    
+    <p class="entry-technologies">Technology One, Technology Two, Technology Three</p>
+  </div>
+  <a class="writing-arrow" href="/entries/example-project/" aria-label="Read Example Project: Replace This With Your Own">→</a>
+</article>
+
+
+<article class="entry-row entry-article">
+  <div class="entry-side">
+    <time datetime="2026-01-10T00:00:00+01:00">Jan 2026</time>
+    
+      <a class="entry-thumb-link" href="/entries/example-article/">
+        <img class="entry-thumb" src="/images/articles/example-article/cover.svg" alt="Placeholder thumbnail for the example article">
+      </a>
+    
+  </div>
+  <div class="entry-main">
+    <p class="writing-topic">Example Category 5 min</p>
+    <h2><a href="/entries/example-article/">Example Article: Replace This With Your Own</a></h2>
+    <p>A short abstract shown in the Writing list, on the home page and in social previews.</p>
+    
+    
+  </div>
+  <a class="writing-arrow" href="/entries/example-article/" aria-label="Read Example Article: Replace This With Your Own">→</a>
+</article>
+</div>
+<p class="more-link"><a href="/archive/">View the archive →</a></p>
+
+
+</div>
+  </main>
+  
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">Your Name</h2>
+    <div class="footer-columns">
+      <ul><li>© 2026</li></ul>
+      <ul class="footer-links"><li><a href="https://github.com/yourname">GitHub</a></li><li><a href="https://www.linkedin.com/in/yourname">LinkedIn</a></li></ul>
+    </div>
+  </div>
+</footer>
+  
+<script src="/js/theme.js?v=1784019391" defer></script>
+<script src="/js/background.js?v=1784019391" defer></script>
+<script src="/js/font.js?v=1784019391" defer></script>
+<script src="/js/nav.js?v=1784019391" defer></script>
+</body>
+</html>

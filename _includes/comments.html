@@ -1,0 +1,20 @@
+{% if site.discussions.enabled and site.discussions.repo != '' and site.discussions.repo_id != '' and site.discussions.category_id != '' %}
+{% assign current_lang = page.lang | default: site.languages.default %}
+<section class="comments">
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ site.discussions.repo }}"
+    data-repo-id="{{ site.discussions.repo_id }}"
+    data-category="{{ site.discussions.category }}"
+    data-category-id="{{ site.discussions.category_id }}"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="{{ current_lang }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+{% endif %}

@@ -1,0 +1,17 @@
+{% assign current_home = site.languages.available | where: 'code', include.current_lang | map: 'home_url' | first %}
+{% assign path_remainder = page.url | remove_first: current_home %}
+{% for lang in site.languages.available %}
+  {% if lang.code == include.current_lang %}
+    {% assign hreflang_url = page.url %}
+  {% else %}
+    {% assign hreflang_url = nil %}
+    {% if page.slug %}
+      {% assign translation = site.pages | where: 'slug', page.slug | where: 'lang', lang.code | first %}
+      {% if translation %}{% assign hreflang_url = translation.url %}{% endif %}
+    {% endif %}
+    {% unless hreflang_url %}{% assign hreflang_url = lang.home_url | append: path_remainder %}{% endunless %}
+  {% endif %}
+<link rel="alternate" hreflang="{{ lang.code }}" href="{{ site.url }}{{ hreflang_url | relative_url }}">
+{% endfor %}
+{% assign default_home = site.languages.available | where: 'code', site.languages.default | map: 'home_url' | first %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ default_home | relative_url }}">

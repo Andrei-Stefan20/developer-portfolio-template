@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b2b2b">
+  <script>
+  (function () {
+    try {
+      var mode = 'auto';
+      var storedTheme = localStorage.getItem('theme');
+      var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var theme = mode === 'auto' ? (storedTheme || systemTheme) : mode;
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme-mode', mode);
+
+      var storedBackground = localStorage.getItem('bg-pattern');
+      var defaultBackground = 'grid';
+      if (storedBackground || defaultBackground !== 'none') {
+        document.documentElement.setAttribute('data-bg', storedBackground || defaultBackground);
+      }
+
+      var storedFont = localStorage.getItem('font-style');
+      var defaultFont = 'default';
+      if ((storedFont || defaultFont) === 'hand') {
+        document.documentElement.setAttribute('data-font', 'hand');
+      }
+    } catch (error) {}
+  })();
+</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap">
+  
+<link rel="stylesheet" href="/css/style.css?v=1784019391">
+<link rel="stylesheet" href="/css/clean-layout.css?v=1784019391">
+<style>:root { --accent-base: #2b2b2b; }</style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Articolo di esempio: sostituiscilo con il tuo | Your Name</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Articolo di esempio: sostituiscilo con il tuo" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Un breve abstract mostrato nell’elenco Articoli, in home e nelle anteprime social." />
+<meta property="og:description" content="Un breve abstract mostrato nell’elenco Articoli, in home e nelle anteprime social." />
+<link rel="canonical" href="https://yourname.github.io/it/entries/example-article/" />
+<meta property="og:url" content="https://yourname.github.io/it/entries/example-article/" />
+<meta property="og:site_name" content="Your Name" />
+<meta property="og:image" content="https://yourname.github.io/images/articles/example-article/cover.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-10T00:00:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://yourname.github.io/images/articles/example-article/cover.svg" />
+<meta property="twitter:title" content="Articolo di esempio: sostituiscilo con il tuo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Your Name"},"dateModified":"2026-01-10T00:00:00+01:00","datePublished":"2026-01-10T00:00:00+01:00","description":"Un breve abstract mostrato nell’elenco Articoli, in home e nelle anteprime social.","headline":"Articolo di esempio: sostituiscilo con il tuo","image":"https://yourname.github.io/images/articles/example-article/cover.svg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yourname.github.io/it/entries/example-article/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://yourname.github.io/images/profile.svg"},"name":"Your Name"},"url":"https://yourname.github.io/it/entries/example-article/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="https://yourname.github.io/feed.xml" title="Your Name" />
+  
+  
+  <meta property="og:image" content="https://yourname.github.io/images/articles/example-article/cover.svg">
+  <meta name="twitter:image" content="https://yourname.github.io/images/articles/example-article/cover.svg">
+  
+  
+
+
+  
+<link rel="alternate" hreflang="en" href="https://yourname.github.io/entries/example-article/">
+
+  
+<link rel="alternate" hreflang="it" href="https://yourname.github.io/it/entries/example-article/">
+
+
+<link rel="alternate" hreflang="x-default" href="https://yourname.github.io/">
+  
+</head>
+<body>
+  
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/it/">Your Name</a>
+    <button type="button" class="nav-toggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="site-nav" data-open-label="Apri il menu" data-close-label="Chiudi il menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigazione principale">
+      <div class="nav-links">
+        
+        
+        
+        
+          
+          
+          
+          
+          <a class="page-link" href="/it/">Home</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/it/about/">Chi sono</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/it/work/">Progetti</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/it/writing/">Articoli</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/it/archive/">Archivio</a>
+        
+        
+        
+      </div>
+      <div class="nav-utility">
+        <div class="lang-switch">
+          
+            
+              
+              
+              
+              <a class="page-link lang-link" href="/entries/example-article/" title="Visualizza in EN">EN</a>
+            
+          
+            
+          
+        </div>
+        <button type="button" class="bg-toggle" aria-label="Cambia motivo dello sfondo">
+          <svg class="icon-bg-none" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+          <svg class="icon-bg-grid" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+          <svg class="icon-bg-dots" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="8" cy="8" r="1.4"/><circle cx="16" cy="8" r="1.4"/><circle cx="8" cy="16" r="1.4"/><circle cx="16" cy="16" r="1.4"/><circle cx="12" cy="12" r="1.4"/></svg>
+        </button>
+        <button type="button" class="font-toggle" aria-label="Attiva o disattiva il carattere scritto a mano">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </button>
+        <button type="button" class="theme-toggle" aria-label="Cambia tema chiaro o scuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l1.41 1.41"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="page-content">
+    <div class="wrapper">
+
+
+<article class="content-page article-page">
+  <p class="post-date">Categoria di esempio January 2026</p>
+  
+    <figure class="article-cover-frame">
+      <img class="article-cover" src="/images/articles/example-article/cover.svg" alt="Immagine segnaposto per l'articolo di esempio">
+    </figure>
+  
+  <h1 class="page-title">Articolo di esempio: sostituiscilo con il tuo</h1>
+  <p class="page-intro">Un breve abstract mostrato nell'elenco Articoli, in home e nelle anteprime social.</p>
+  <div class="article-content"><p>Questo è un articolo di esempio. Duplica questa cartella (<code class="language-plaintext highlighter-rouge">entries/articles/example-article/</code>) per aggiungere un articolo reale, oppure modifica questo file.</p>
+
+<p>Scrivi qui l’introduzione: quale domanda o idea esplora l’articolo?</p>
+
+<h2 id="prima-sezione">Prima sezione</h2>
+
+<p>Scrivi il corpo dell’articolo in Markdown normale: titoli, paragrafi, elenchi, blocchi di codice e immagini inline (<code class="language-plaintext highlighter-rouge">![alt](/images/articles/example-article/tua-immagine.png)</code>) funzionano come previsto.</p>
+
+<h2 id="conclusione">Conclusione</h2>
+
+<p>Riassumi il concetto principale.</p>
+
+<hr />
+
+<p>Elimina questo file (e la sua traduzione <code class="language-plaintext highlighter-rouge">en.md</code>) una volta aggiunti i tuoi articoli, oppure tienilo come riferimento per i campi del front matter.</p>
+</div>
+  
+</article></div>
+  </main>
+  
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">Your Name</h2>
+    <div class="footer-columns">
+      <ul><li>© 2026</li></ul>
+      <ul class="footer-links"><li><a href="https://github.com/yourname">GitHub</a></li><li><a href="https://www.linkedin.com/in/yourname">LinkedIn</a></li></ul>
+    </div>
+  </div>
+</footer>
+  
+<script src="/js/theme.js?v=1784019391" defer></script>
+<script src="/js/background.js?v=1784019391" defer></script>
+<script src="/js/font.js?v=1784019391" defer></script>
+<script src="/js/nav.js?v=1784019391" defer></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+.case-study-page {
+  max-width: 760px;
+}
+
+.case-study-header {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  padding-bottom: 8px;
+}
+
+.case-study-header .post-date {
+  margin-bottom: 10px;
+}
+
+.case-study-cover {
+  margin: 0 0 26px;
+  padding: 18px;
+  border-radius: 8px;
+  background: var(--thumb-bg);
+  overflow: hidden;
+}
+
+.case-study-page .project-hero {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 420px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.case-study-page .page-title {
+  max-width: 720px;
+  margin-bottom: 10px;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+.case-study-page .page-intro {
+  max-width: 680px;
+  margin-bottom: 14px;
+  color: var(--fg-soft);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.case-study-header .item-tags {
+  margin: 0 0 16px;
+  font: 12px/1.6 var(--mono);
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.case-study-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fg);
+  font: 13px/1.2 var(--mono);
+  text-decoration: none !important;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.case-study-button:hover,
+.case-study-button:focus-visible {
+  border-color: var(--accent);
+  background: var(--code-bg);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.case-study-button:active {
+  transform: translateY(1px);
+}
+
+.case-study-button.primary {
+  border-color: var(--border);
+  background: transparent;
+  color: var(--fg) !important;
+  font-weight: 600;
+}
+
+.case-study-button.primary:hover,
+.case-study-button.primary:focus-visible {
+  border-color: var(--accent);
+  background: var(--code-bg);
+  color: var(--fg) !important;
+}
+
+.case-study-page .article-content {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.case-study-page .article-content h2 {
+  margin: 52px 0 14px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.case-study-page .article-content h3 {
+  margin-top: 34px;
+  font-size: 20px;
+}
+
+.case-study-page .article-content p {
+  margin-bottom: 20px;
+}
+
+.case-study-page .article-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 28px 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--thumb-bg);
+}
+
+.case-study-page .article-content blockquote {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--code-bg);
+  color: var(--fg-soft);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.project-card,
+.project-callout,
+.project-flow div {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.project-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 26px 0;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.project-gallery img {
+  width: 100% !important;
+  height: 180px;
+  margin: 0 !important;
+  object-fit: cover;
+}
+
+.case-study-page .comments {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 760px) {
+  .case-study-cover {
+    padding: 12px;
+    margin-bottom: 22px;
+  }
+
+  .case-study-page .project-hero {
+    max-height: 320px;
+  }
+
+  .case-study-page .page-title {
+    font-size: 30px;
+  }
+
+  .case-study-page .page-intro {
+    font-size: 16px;
+  }
+
+  .case-study-actions {
+    gap: 8px;
+  }
+
+  .case-study-button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .project-grid,
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-gallery img {
+    height: auto;
+  }
+}

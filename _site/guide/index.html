@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b2b2b">
+  <script>
+  (function () {
+    try {
+      var mode = 'auto';
+      var storedTheme = localStorage.getItem('theme');
+      var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var theme = mode === 'auto' ? (storedTheme || systemTheme) : mode;
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme-mode', mode);
+
+      var storedBackground = localStorage.getItem('bg-pattern');
+      var defaultBackground = 'grid';
+      if (storedBackground || defaultBackground !== 'none') {
+        document.documentElement.setAttribute('data-bg', storedBackground || defaultBackground);
+      }
+
+      var storedFont = localStorage.getItem('font-style');
+      var defaultFont = 'default';
+      if ((storedFont || defaultFont) === 'hand') {
+        document.documentElement.setAttribute('data-font', 'hand');
+      }
+    } catch (error) {}
+  })();
+</script>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap">
+  
+<link rel="stylesheet" href="/css/style.css?v=1784019391">
+<link rel="stylesheet" href="/css/clean-layout.css?v=1784019391">
+<style>:root { --accent-base: #2b2b2b; }</style>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Template guide | Your Name</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Template guide" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to edit identity, content, translations and appearance, and how to publish updates." />
+<meta property="og:description" content="How to edit identity, content, translations and appearance, and how to publish updates." />
+<link rel="canonical" href="https://yourname.github.io/guide/" />
+<meta property="og:url" content="https://yourname.github.io/guide/" />
+<meta property="og:site_name" content="Your Name" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-14T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Template guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Your Name"},"dateModified":"2026-07-14T00:00:00+02:00","datePublished":"2026-07-14T00:00:00+02:00","description":"How to edit identity, content, translations and appearance, and how to publish updates.","headline":"Template guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://yourname.github.io/guide/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://yourname.github.io/images/profile.svg"},"name":"Your Name"},"url":"https://yourname.github.io/guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="https://yourname.github.io/feed.xml" title="Your Name" />
+  
+  
+  <meta property="og:image" content="https://yourname.github.io/images/profile.svg">
+  <meta name="twitter:image" content="https://yourname.github.io/images/profile.svg">
+  
+  
+  
+</head>
+<body>
+  
+
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Your Name</a>
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav" data-open-label="Open menu" data-close-label="Close menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <div class="nav-links">
+        
+        
+        
+        
+          
+          
+          
+          
+          <a class="page-link" href="/">Home</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/about/">About</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/work/">Projects</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/writing/">Writing</a>
+        
+          
+          
+          
+          
+          <a class="page-link" href="/archive/">Archive</a>
+        
+        
+        
+      </div>
+      <div class="nav-utility">
+        <div class="lang-switch">
+          
+            
+          
+            
+              
+              
+              
+              <a class="page-link lang-link" href="/it/" title="View in IT">IT</a>
+            
+          
+        </div>
+        <button type="button" class="bg-toggle" aria-label="Change background pattern">
+          <svg class="icon-bg-none" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+          <svg class="icon-bg-grid" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+          <svg class="icon-bg-dots" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="8" cy="8" r="1.4"/><circle cx="16" cy="8" r="1.4"/><circle cx="8" cy="16" r="1.4"/><circle cx="16" cy="16" r="1.4"/><circle cx="12" cy="12" r="1.4"/></svg>
+        </button>
+        <button type="button" class="font-toggle" aria-label="Toggle handwritten font">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </button>
+        <button type="button" class="theme-toggle" aria-label="Switch between light and dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l1.41 1.41"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="page-content">
+    <div class="wrapper">
+
+
+<article class="content-page article-page">
+  <p class="post-date">Documentation July 2026</p>
+  
+  <h1 class="page-title">Template guide</h1>
+  <p class="page-intro">How to edit identity, content, translations and appearance, and how to publish updates.</p>
+  <div class="article-content"><p>Every part of the portfolio is driven by text and configuration files: routine work never requires touching code. This page collects the most common tasks.</p>
+
+<h2 id="repository-structure">Repository structure</h2>
+
+<p>Everything you’ll need to edit regularly lives in four places. The rest (<code class="language-plaintext highlighter-rouge">_layouts/</code>, <code class="language-plaintext highlighter-rouge">_includes/</code>, <code class="language-plaintext highlighter-rouge">css/</code>, <code class="language-plaintext highlighter-rouge">js/</code>) is the template’s machinery and rarely needs to change.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>Where</th>
+      <th>When to touch it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identity, languages, appearance</td>
+      <td><code class="language-plaintext highlighter-rouge">_config.yml</code></td>
+      <td>Name, role, social links, colors</td>
+    </tr>
+    <tr>
+      <td>Content</td>
+      <td><code class="language-plaintext highlighter-rouge">entries/</code></td>
+      <td>One project or article, one file per language</td>
+    </tr>
+    <tr>
+      <td>Interface text</td>
+      <td><code class="language-plaintext highlighter-rouge">_data/locales/</code></td>
+      <td>Labels, headings, messages</td>
+    </tr>
+    <tr>
+      <td>Images</td>
+      <td><code class="language-plaintext highlighter-rouge">images/</code></td>
+      <td>Covers and thumbnails for content</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Locally, run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> and open <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> to see every change before publishing it.</p>
+
+<h2 id="site-identity">Site identity</h2>
+
+<p>Name, role, links and description are read from <code class="language-plaintext highlighter-rouge">_config.yml</code> and appear in the header, home page and footer.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">Name"</span>
+  <span class="na">role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">Role"</span>
+  <span class="na">education</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">Second</span><span class="nv"> </span><span class="s">Role</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Field</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Study"</span>
+  <span class="na">location</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Your</span><span class="nv"> </span><span class="s">City,</span><span class="nv"> </span><span class="s">Country"</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+  <span class="na">github</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/yourname"</span>
+  <span class="na">linkedin</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://linkedin.com/in/..."</span>
+  <span class="na">cv</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/files/cv.pdf"</span>
+</code></pre></div></div>
+
+<p>Any field left empty (<code class="language-plaintext highlighter-rouge">""</code>) automatically disappears from the interface: no need to comment out or delete lines, just empty them.</p>
+
+<p><img src="/docs/readme/guide/home.png" alt="Home page with profile, biography and recent content" /></p>
+
+<h2 id="adding-a-project">Adding a project</h2>
+
+<p>Every project lives in <code class="language-plaintext highlighter-rouge">entries/projects/&lt;slug&gt;/</code>, with one Markdown file per language. The <code class="language-plaintext highlighter-rouge">slug</code> must be identical across languages: that’s how the language switcher finds the matching page.</p>
+
+<ol>
+  <li>Create <code class="language-plaintext highlighter-rouge">entries/projects/project-name/en.md</code> and <code class="language-plaintext highlighter-rouge">it.md</code> (start from <code class="language-plaintext highlighter-rouge">content-templates/project.md</code>).</li>
+  <li>Fill in the front matter:</li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Project</span><span class="nv"> </span><span class="s">title"</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">project</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">case-study</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
+<span class="na">slug</span><span class="pi">:</span> <span class="s">project-name</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/entries/project-name/</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2026-01-15</span>
+<span class="na">role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Machine</span><span class="nv"> </span><span class="s">Learning</span><span class="nv"> </span><span class="s">Engineering"</span>
+<span class="na">technologies</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Python</span><span class="pi">,</span> <span class="nv">PyTorch</span><span class="pi">]</span>
+<span class="na">thumbnail</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/images/projects/project-name/thumb.png"</span>
+<span class="na">cover</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/images/projects/project-name/cover.png"</span>
+<span class="na">code</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/yourname/repo"</span>
+<span class="na">excerpt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Short</span><span class="nv"> </span><span class="s">summary</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">listings."</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Every non-default language needs its own permalink, prefixed the same way as its top-level pages (<code class="language-plaintext highlighter-rouge">lang: it</code> → <code class="language-plaintext highlighter-rouge">permalink: /it/entries/project-name/</code>). Reusing the English permalink makes Jekyll silently overwrite one language’s page with the other at build time.</p>
+
+<ol>
+  <li>Add cover and thumbnail images under <code class="language-plaintext highlighter-rouge">images/projects/project-name/</code> (same folder name as the slug).</li>
+  <li>Check it locally: the project immediately shows up in Projects, on the home page among the latest entries, and in the Archive. No other file needs updating.</li>
+</ol>
+
+<p><img src="/docs/readme/guide/work.png" alt="Project list with thumbnails" /></p>
+
+<p><img src="/docs/readme/guide/case-study.png" alt="Project detail page" /></p>
+
+<h2 id="adding-an-article">Adding an article</h2>
+
+<p>Same logic as projects, under <code class="language-plaintext highlighter-rouge">entries/articles/&lt;slug&gt;/</code>, with <code class="language-plaintext highlighter-rouge">layout: article</code> instead of <code class="language-plaintext highlighter-rouge">case-study</code> and a couple of extra editorial fields.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Article</span><span class="nv"> </span><span class="s">title"</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">article</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">article</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
+<span class="na">slug</span><span class="pi">:</span> <span class="s">article-name</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/entries/article-name/</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2026-01-15</span>
+<span class="na">category</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Knowledge</span><span class="nv"> </span><span class="s">Graphs"</span>
+<span class="na">read_time</span><span class="pi">:</span> <span class="m">8</span>
+<span class="na">cover</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/images/articles/article-name/cover.png"</span>
+<span class="na">excerpt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Short</span><span class="nv"> </span><span class="s">abstract</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">listings</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">social</span><span class="nv"> </span><span class="s">previews."</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Same rule as projects: give the <code class="language-plaintext highlighter-rouge">it</code> version its own <code class="language-plaintext highlighter-rouge">/it/entries/article-name/</code> permalink instead of reusing the English one.</p>
+
+<p>The body is written in plain Markdown below the front matter: headings, paragraphs, inline images with <code class="language-plaintext highlighter-rouge">![alt](/images/...)</code>.</p>
+
+<p><img src="/docs/readme/guide/writing.png" alt="Article list with date, category and read time" /></p>
+
+<h2 id="translations-and-adding-a-language">Translations and adding a language</h2>
+
+<p>Every interface label (menus, buttons, headings, empty-state messages) lives in <code class="language-plaintext highlighter-rouge">_data/locales/en.yml</code> and <code class="language-plaintext highlighter-rouge">it.yml</code>, never hand-written inside a template.</p>
+
+<p><img src="/docs/readme/guide/archive-en.png" alt="Archive page in English" /></p>
+
+<p><img src="/docs/readme/guide/archive-it.png" alt="Archive page in Italian" /></p>
+
+<p>To add a new language (e.g. Spanish):</p>
+
+<ol>
+  <li>Copy <code class="language-plaintext highlighter-rouge">_data/locales/en.yml</code> to <code class="language-plaintext highlighter-rouge">_data/locales/es.yml</code> and translate the values.</li>
+  <li>Register the language in <code class="language-plaintext highlighter-rouge">_config.yml</code> under <code class="language-plaintext highlighter-rouge">languages.available</code>.</li>
+  <li>Duplicate the top-level pages (<code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">work.html</code>, etc.) into an <code class="language-plaintext highlighter-rouge">/es/</code> folder: front matter with <code class="language-plaintext highlighter-rouge">lang: es</code> and a permalink, body reduced to a single <code class="language-plaintext highlighter-rouge">{% include page-*.html %}</code>. The real content stays in the shared includes.</li>
+</ol>
+
+<p>Every translated project or article must share the same <code class="language-plaintext highlighter-rouge">slug</code> across languages: that’s the key that links the versions together in the language switcher.</p>
+
+<h2 id="color-background-and-typeface">Color, background and typeface</h2>
+
+<p>Three visual options are set from <code class="language-plaintext highlighter-rouge">_config.yml</code>, under <code class="language-plaintext highlighter-rouge">appearance:</code>, and also become buttons visitors can change themselves (their choice is remembered in the browser).</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">appearance</span><span class="pi">:</span>
+  <span class="na">accent_color</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#2b2b2b"</span>
+  <span class="na">background_pattern</span><span class="pi">:</span> <span class="s2">"</span><span class="s">grid"</span>   <span class="c1"># none, grid, dots</span>
+  <span class="na">theme_mode</span><span class="pi">:</span> <span class="s2">"</span><span class="s">auto"</span>           <span class="c1"># auto, light, dark</span>
+  <span class="na">font_style</span><span class="pi">:</span> <span class="s2">"</span><span class="s">default"</span>        <span class="c1"># default, hand</span>
+</code></pre></div></div>
+
+<p><img src="/docs/readme/guide/bg-grid.png" alt="Grid background pattern" /></p>
+
+<p><img src="/docs/readme/guide/bg-dots.png" alt="Dots background pattern" /></p>
+
+<h2 id="the-three-buttons-in-the-top-right">The three buttons in the top right</h2>
+
+<p>Background pattern, handwritten font and light/dark theme are three independent buttons in <code class="language-plaintext highlighter-rouge">_includes/site-header.html</code>. Each button is self-contained: deleting its block simply makes the linked script in <code class="language-plaintext highlighter-rouge">js/</code> a no-op, nothing else needs to change.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.bg-toggle</code>: cycles none, grid, dots.</li>
+  <li><code class="language-plaintext highlighter-rouge">.font-toggle</code>: toggles the handwritten font.</li>
+  <li><code class="language-plaintext highlighter-rouge">.theme-toggle</code>: switches between light and dark.</li>
+</ul>
+
+<p><img src="/docs/readme/guide/mobile-menu.png" alt="Mobile navigation menu open, with the three buttons at the bottom" /></p>
+
+<p>To <strong>hide</strong> one or more buttons, open <code class="language-plaintext highlighter-rouge">_includes/site-header.html</code> and delete the matching block:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"bg-toggle"</span> <span class="err">...</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"font-toggle"</span> <span class="err">...</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"theme-toggle"</span> <span class="err">...</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>Delete one of the three <code class="language-plaintext highlighter-rouge">&lt;button&gt;...&lt;/button&gt;</code> blocks to remove that button everywhere on the site (desktop and mobile, since the header is a single shared include).</p>
+
+<p>If you remove <code class="language-plaintext highlighter-rouge">theme-toggle</code>, the theme is still chosen automatically based on the visitor’s operating system thanks to <code class="language-plaintext highlighter-rouge">theme_mode: "auto"</code>. Removing the button only removes the ability to switch it manually.</p>
+
+<h2 id="comments-and-analytics">Comments and analytics</h2>
+
+<p>Both are off until you fill in the configuration: no external script loads by default.</p>
+
+<p><strong>Comments (Giscus, via GitHub Discussions):</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">discussions</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">repo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">yourname/yourname.github.io"</span>
+  <span class="na">repo_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">..."</span>
+  <span class="na">category</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Announcements"</span>
+  <span class="na">category_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">..."</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">repo_id</code> and <code class="language-plaintext highlighter-rouge">category_id</code> values come from the official generator at giscus.app, after enabling Discussions on the repository.</p>
+
+<p><strong>Analytics (Plausible):</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">analytics</span><span class="pi">:</span>
+  <span class="na">plausible_domain</span><span class="pi">:</span> <span class="s2">"</span><span class="s">yoursite.github.io"</span>
+</code></pre></div></div>
+
+<p>Just a domain: if the field is left empty, no analytics script is included on the page.</p>
+
+<h2 id="validating-and-publishing">Validating and publishing</h2>
+
+<p>Before any significant push:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby scripts/validate_site.rb
+bundle <span class="nb">exec </span>jekyll build
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">validate_site.rb</code> checks the required <code class="language-plaintext highlighter-rouge">_config.yml</code> fields, every content file’s front matter, the configured languages, duplicate permalinks, and referenced local images.</p>
+
+<p>Every push to <code class="language-plaintext highlighter-rouge">main</code> automatically triggers the GitHub Actions pipeline: Jekyll build → Pagefind search index → GitHub Pages publish. No manual step is required.</p>
+
+<h2 id="quick-file-map">Quick file map</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>File / folder</th>
+      <th>Contains</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_config.yml</code></td>
+      <td>Identity, languages, appearance, integrations</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_data/locales/*.yml</code></td>
+      <td>All interface text, per language</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entries/projects/&lt;slug&gt;/</code></td>
+      <td>One <code class="language-plaintext highlighter-rouge">.md</code> file per language, per project</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entries/articles/&lt;slug&gt;/</code></td>
+      <td>One <code class="language-plaintext highlighter-rouge">.md</code> file per language, per article</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">images/projects/</code>, <code class="language-plaintext highlighter-rouge">images/articles/</code></td>
+      <td>Covers and thumbnails, grouped by slug</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">content-templates/</code></td>
+      <td>Starting front matter for new content</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_includes/site-header.html</code></td>
+      <td>Menu, appearance buttons, language switcher</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">_includes/page-*.html</code></td>
+      <td>Shared body for the home/work/writing/about pages</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scripts/validate_site.rb</code></td>
+      <td>Automated check before publishing</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  
+</article></div>
+  </main>
+  
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">Your Name</h2>
+    <div class="footer-columns">
+      <ul><li>© 2026</li></ul>
+      <ul class="footer-links"><li><a href="https://github.com/yourname">GitHub</a></li><li><a href="https://www.linkedin.com/in/yourname">LinkedIn</a></li></ul>
+    </div>
+  </div>
+</footer>
+  
+<script src="/js/theme.js?v=1784019391" defer></script>
+<script src="/js/background.js?v=1784019391" defer></script>
+<script src="/js/font.js?v=1784019391" defer></script>
+<script src="/js/nav.js?v=1784019391" defer></script>
+</body>
+</html>

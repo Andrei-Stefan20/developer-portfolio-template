@@ -1,0 +1,11 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+{% assign entry_image = include.item.cover | default: include.item.image | default: include.item.thumbnail %}
+<article class="writing-item{% unless entry_image and entry_image != '' %} writing-no-image{% endunless %}">
+  <div class="entry-side">
+    <time datetime="{{ include.item.date | date_to_xmlschema }}">{{ include.item.date | date: '%b %Y' }}</time>
+    {% if entry_image and entry_image != '' %}<a class="entry-thumb-link" href="{{ include.item.url | relative_url }}"><img class="entry-thumb" src="{{ entry_image | relative_url }}" alt="{{ include.item.cover_alt | default: include.item.thumbnail_alt | default: include.item.title }}"></a>{% endif %}
+  </div>
+  <div class="entry-main"><p class="writing-topic">{{ include.item.category | default: t.writing.default_category }}{% if include.item.read_time %} {{ include.item.read_time }} {{ t.writing.read_suffix }}{% endif %}</p><h2><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h2><p>{{ include.item.excerpt | strip_html | strip_newlines }}</p></div>
+  <a class="writing-arrow" href="{{ include.item.url | relative_url }}" aria-label="{{ t.content.read_aria_prefix }} {{ include.item.title }}">→</a>
+</article>

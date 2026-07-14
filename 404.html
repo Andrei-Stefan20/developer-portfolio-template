@@ -1,0 +1,12 @@
+---
+layout: site
+title: 404
+permalink: /404.html
+no_alternates: true
+---
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+<p class="page-count">{{ t.errors.not_found_code }}</p>
+<h1 class="page-title">{{ t.errors.not_found_title }}</h1>
+<p class="page-intro">{{ t.errors.not_found_text }}</p>
+<p><a href="{{ '/' | relative_url }}">{{ t.errors.home_link }}</a></p>

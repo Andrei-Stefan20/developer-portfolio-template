@@ -1,0 +1,34 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ site.appearance.accent_color }}">
+  {% include head-preferences.html %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap">
+  {% include site-assets.html %}
+  {% seo %}
+  {% feed_meta %}
+  {% assign share_image = page.image | default: site.logo %}
+  {% if share_image and share_image != '' %}
+  <meta property="og:image" content="{{ share_image | absolute_url }}">
+  <meta name="twitter:image" content="{{ share_image | absolute_url }}">
+  {% endif %}
+  {% unless page.no_alternates %}{% include head-alternates.html current_lang=current_lang %}{% endunless %}
+  {% if site.analytics.plausible_domain and site.analytics.plausible_domain != '' %}
+  <script defer data-domain="{{ site.analytics.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
+  {% endif %}
+</head>
+<body>
+  {% include site-header.html %}
+  <main class="page-content">
+    <div class="wrapper">{{ content }}</div>
+  </main>
+  {% include site-footer.html %}
+  {% include site-scripts.html %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+{% assign projects_only = site.pages | where: 'type', 'project' %}
+{% assign articles_only = site.pages | where: 'type', 'article' %}
+{% assign lang_entries = projects_only | concat: articles_only | where: 'lang', current_lang %}
+<div class="profile">
+  {% if site.author.avatar and site.author.avatar != '' %}<img class="profile-photo" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }} {{ t.accessibility.profile_photo_suffix }}">{% endif %}
+  <div>
+    {% if site.author.name and site.author.name != '' %}<h1>{{ site.author.name }}</h1>{% endif %}
+    {% if site.author.role != '' or site.author.education != '' or site.author.location != '' %}<p>{% if site.author.role and site.author.role != '' %}<b>{{ site.author.role }}.</b>{% endif %} {% if site.author.education and site.author.education != '' %}<b>{{ site.author.education }}.</b>{% endif %} {% if site.author.location and site.author.location != '' %}<b>{{ site.author.location }}.</b>{% endif %}</p>{% endif %}
+    {% if site.author.email and site.author.email != '' %}<p class="small"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>{% endif %}
+  </div>
+</div>
+
+<h2 class="section-title no-rule">{{ t.home.about_title }}</h2>
+<div class="about-text">{% for paragraph in t.about %}<p>{{ paragraph }}</p>{% endfor %}</div>
+
+{% if lang_entries.size > 0 %}
+<h2 class="section-title">{{ t.home.recent_title }}</h2>
+<p class="section-intro">{{ t.home.recent_intro }}</p>
+<div class="recent-list">
+  {% assign recent = lang_entries | sort: 'date' | reverse %}
+  {% for entry in recent limit: site.appearance.recent_items_on_home %}{% include recent-entry.html item=entry %}{% endfor %}
+</div>
+<p class="more-link"><a href="{{ t.home.archive_url | relative_url }}">{{ t.home.archive_link }}</a></p>
+{% endif %}

@@ -1,0 +1,11 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+<footer class="site-footer">
+  <div class="wrapper">
+    {% if site.author.name and site.author.name != '' %}<h2 class="footer-heading">{{ site.author.name }}</h2>{% endif %}
+    <div class="footer-columns">
+      <ul>{% if site.author.email and site.author.email != '' %}<li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>{% endif %}<li>{{ t.footer.copyright_symbol }} {{ 'now' | date: '%Y' }}</li></ul>
+      <ul class="footer-links">{% if site.author.github and site.author.github != '' %}<li><a href="{{ site.author.github }}">{{ t.footer.github }}</a></li>{% endif %}{% if site.author.linkedin and site.author.linkedin != '' %}<li><a href="{{ site.author.linkedin }}">{{ t.footer.linkedin }}</a></li>{% endif %}{% if site.author.scholar and site.author.scholar != '' %}<li><a href="{{ site.author.scholar }}">{{ t.footer.scholar }}</a></li>{% endif %}{% if site.author.orcid and site.author.orcid != '' %}<li><a href="{{ site.author.orcid }}">{{ t.footer.orcid }}</a></li>{% endif %}{% if site.author.cv and site.author.cv != '' %}<li><a class="footer-cv" href="{{ site.author.cv | relative_url }}">{{ t.navigation.cv }}</a></li>{% endif %}</ul>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+{% assign articles = site.pages | where: 'lang', current_lang | where: 'type', 'article' | sort: 'date' | reverse %}
+
+<div class="page-heading">
+  <div>
+    <h1 class="page-title">{{ t.writing.title }}</h1>
+    <p class="page-intro">{{ t.writing.intro }}</p>
+  </div>
+  <p class="page-count">{{ articles | size }} {{ t.writing.count_label }}</p>
+</div>
+
+{% if articles.size > 0 %}
+<div class="writing-list">
+  {% for article in articles %}
+    {% include writing-entry.html item=article %}
+  {% endfor %}
+</div>
+{% else %}
+<p>{{ t.archive.empty }}</p>
+{% endif %}

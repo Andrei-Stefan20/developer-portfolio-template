@@ -1,0 +1,7 @@
+{% assign current_lang = page.lang | default: site.languages.default %}
+{% assign t = site.data.locales[current_lang] %}
+{% assign projects = site.pages | where: 'lang', current_lang | where: 'type', 'project' | sort: 'date' | reverse %}
+<div class="page-heading"><div><h1 class="page-title">{{ t.work.title }}</h1><p class="page-intro">{{ t.work.intro }}</p></div><p class="page-count">{{ projects | size }} {{ t.work.count_label }}</p></div>
+{% if projects.size > 0 %}
+<div class="item-list">{% for project in projects %}{% include work-entry.html item=project %}{% endfor %}</div>
+{% else %}<p>{{ t.work.empty }}</p>{% endif %}
