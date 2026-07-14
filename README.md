@@ -1,6 +1,6 @@
 <div align="center">
 
-# Multilingual Portfolio Template
+# Developer Portfolio Template
 
 **A clean, multilingual Jekyll template for developers and researchers to present projects, case studies, and technical writing.**
 
@@ -8,6 +8,8 @@
 [![GitHub Pages](https://img.shields.io/badge/Deploy%20with-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 [![License](https://img.shields.io/badge/License-MIT-2b2b2b?style=for-the-badge)](LICENSE)
 [![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20IT%20%2B%20more-2b2b2b?style=for-the-badge)](docs/guide.md#translations-and-adding-a-language)
+
+**[Live demo →](https://andrei-stefan20.github.io/developer-portfolio-template/)**
 
 <br>
 
