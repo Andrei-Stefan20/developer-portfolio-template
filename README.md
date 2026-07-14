@@ -26,7 +26,7 @@ It's intentionally lightweight: Jekyll generates the pages, GitHub Actions build
 ### What makes it different
 
 - **Projects and articles share one content system** while keeping their own layouts.
-- **Built-in multilingual support** (English + Italian out of the box): pages are linked through shared slugs, and adding any further language is a documented, mechanical process — see [Translations and adding a language](docs/guide.md#translations-and-adding-a-language).
+- **Built-in multilingual support** (English + Italian out of the box): pages are linked through shared slugs, and adding any further language is a documented, mechanical process. See [Translations and adding a language](docs/guide.md#translations-and-adding-a-language).
 - **Archive search and filters** make projects, articles, topics, and technologies easy to browse.
 - **Automatic light/dark mode** follows the visitor's browser on first visit and remembers manual choices.
 - **Configurable visual style**: grid, dots, or plain background, plus an optional handwritten font, all from one config file.

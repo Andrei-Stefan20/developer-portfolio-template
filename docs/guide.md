@@ -42,7 +42,7 @@ author:
 
 Any field left empty (`""`) automatically disappears from the interface: no need to comment out or delete lines, just empty them.
 
-To add a downloadable CV, drop the PDF into `files/` (e.g. `files/cv.pdf`) and point `author.cv` at that path — it must start with `/` and match the file name exactly. This adds a "CV" link to the header and footer; leaving `cv: ""` hides that link entirely.
+To add a downloadable CV, drop the PDF into `files/` (e.g. `files/cv.pdf`) and point `author.cv` at that path. It must start with `/` and match the file name exactly. This adds a "CV" link to the header and footer; leaving `cv: ""` hides that link entirely.
 
 ![Home page with profile, biography and recent content](/docs/readme/guide/home.png)
 
