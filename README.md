@@ -1,13 +1,13 @@
 <div align="center">
 
-# Bilingual Portfolio Template
+# Multilingual Portfolio Template
 
-**A clean, bilingual Jekyll template for developers and researchers to present projects, case studies, and technical writing.**
+**A clean, multilingual Jekyll template for developers and researchers to present projects, case studies, and technical writing.**
 
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.x-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![GitHub Pages](https://img.shields.io/badge/Deploy%20with-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 [![License](https://img.shields.io/badge/License-MIT-2b2b2b?style=for-the-badge)](LICENSE)
-[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20IT-2b2b2b?style=for-the-badge)](#adding-a-language)
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20IT%20%2B%20more-2b2b2b?style=for-the-badge)](docs/guide.md#translations-and-adding-a-language)
 
 <br>
 
@@ -24,7 +24,7 @@ It's intentionally lightweight: Jekyll generates the pages, GitHub Actions build
 ### What makes it different
 
 - **Projects and articles share one content system** while keeping their own layouts.
-- **Built-in bilingual support** (English + Italian by default): pages are linked through shared slugs, and adding a third language is a documented, mechanical process.
+- **Built-in multilingual support** (English + Italian out of the box): pages are linked through shared slugs, and adding any further language is a documented, mechanical process — see [Translations and adding a language](docs/guide.md#translations-and-adding-a-language).
 - **Archive search and filters** make projects, articles, topics, and technologies easy to browse.
 - **Automatic light/dark mode** follows the visitor's browser on first visit and remembers manual choices.
 - **Configurable visual style**: grid, dots, or plain background, plus an optional handwritten font, all from one config file.
